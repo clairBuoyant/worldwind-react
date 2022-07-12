@@ -1,0 +1,53 @@
+{
+  "name": "worldwind-react",
+  "version": "0.0.1-alpha",
+  "description": "An interactive globe for React using NASA's WorldWind Javascript SDK.",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "earth",
+    "geospatial",
+    "map",
+    "nasa",
+    "react",
+    "react-component",
+    "worldwind"
+  ],
+  "scripts": {
+    "clean": "rm -rf dist/",
+    "build": "npm run clean && npm run format && npm run build:esm && npm run build:cjs",
+    "build:cjs": "tsc --module CommonJS --outDir dist/cjs",
+    "build:esm": "tsc",
+    "build:images": "cp -r src/images dist",
+    "format": "prettier --write src/",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kyle J. Burda <kylejbdev@gmail.com>",
+  "license": "GPL-3.0",
+  "homepage": "https://github.com/clairBuoyant/worldwind-react#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/clairBuoyant/worldwind-react.git"
+  },
+  "bugs": {
+    "url": "https://github.com/clairBuoyant/worldwind-react/issues"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.3",
+    "@types/react": "^18.0.15",
+    "@types/react-dom": "^18.0.6",
+    "prettier": "^2.7.1",
+    "typescript": "^4.7.4"
+  },
+  "peerDependencies": {
+    "@nasaworldwind/worldwind": "^0.11.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
