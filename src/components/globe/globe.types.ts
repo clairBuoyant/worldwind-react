@@ -1,4 +1,23 @@
+import type { Layer } from '@nasaworldwind/worldwind';
+
+export interface ILayer {
+    /**
+     * Indicates whether layer is rendered.
+     */
+    enabled: boolean;
+
+    /**
+     * Layer configuration object.
+     */
+    layer: string | Layer;
+}
+
 export interface IGlobeProps {
+    /**
+     * Altitude in meters above sea level (MSL)
+     */
+    altitude?: number;
+
     /**
      * Background color CSS string
      */
@@ -10,10 +29,9 @@ export interface IGlobeProps {
     canvasId?: string;
 
     /**
-     * An array of layer type strings, WorldWind.Layer objects, and/or layer
-     * configuration objects, e.g., {layer: String|WorldWind.Layer, options: Object}
+     * Set Globe projection to 2D.
      */
-    layers?: any[];
+    is2D?: boolean;
 
     /**
      * Latitude +/-90 degrees
@@ -21,19 +39,15 @@ export interface IGlobeProps {
     latitude?: number;
 
     /**
+     * An array of layer type strings, WorldWind.Layer objects, and/or layer
+     * configuration objects, e.g., {layer: String|WorldWind.Layer, options: Object}
+     */
+    layers?: ILayer[];
+
+    /**
      * Longitude +/-180 degrees
      */
     longitude?: number;
-
-    /**
-     * Altitude in meters above sea level (MSL)
-     */
-    altitude?: number;
-
-    /**
-     * A projection identifier string
-     */
-    projection?: string;
 
     /**
      * A callback function to push state up to the parent
@@ -41,7 +55,7 @@ export interface IGlobeProps {
     onUpdate?: Function;
 
     /**
-     * Set Globe projection to 2D.
+     * A projection identifier string
      */
-    is2D?: boolean;
+    projection?: string;
 }

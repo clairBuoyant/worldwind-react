@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 
 import { useWorldWindow } from '../../hooks/useWorldWindow';
 import { DEFAULT_BACKGROUND_COLOR } from './globe.constants';
-import { IGlobeProps } from './globe.types';
+import type { IGlobeProps } from './globe.types';
 
 const defaultGlobeProps = {
     backgroundColor: DEFAULT_BACKGROUND_COLOR,
@@ -16,7 +16,7 @@ export const Globe = ({
     canvasId: defaultCanvasIdOrFromUser = defaultGlobeProps.canvasId,
     layers,
     is2D = defaultGlobeProps.is2D,
-}: IGlobeProps) => {
+}: IGlobeProps): JSX.Element => {
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const [wwdRef, setWwdRef] = useWorldWindow();
 
@@ -26,7 +26,6 @@ export const Globe = ({
         width: '100%',
     };
     const [canvasId] = useState(defaultCanvasIdOrFromUser);
-
     // const [] = useState(defaultBaseUrl); // baseUrl
     // const [] = useState(1); // nextLayerId
     // const [] = useState(new Map()); // categoryTimestamps
