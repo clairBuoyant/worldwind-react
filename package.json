@@ -39,11 +39,11 @@
     "url": "https://github.com/clairBuoyant/worldwind-react/issues"
   },
   "devDependencies": {
-    "@types/node": "^18.0.3",
-    "@types/react": "^18.0.15",
-    "@types/react-dom": "^18.0.6",
-    "prettier": "^2.7.1",
-    "typescript": "^4.7.4"
+    "@types/node": "^20.12.7",
+    "@types/react": "^18.2.79",
+    "@types/react-dom": "^18.2.25",
+    "prettier": "^3.2.5",
+    "typescript": "^5.4.5"
   },
   "peerDependencies": {
     "@nasaworldwind/worldwind": "^0.11.0",

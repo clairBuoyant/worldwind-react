@@ -47,10 +47,7 @@ export const Globe = ({
                 { layer: new WorldWind.BingAerialWithLabelsLayer(), enabled: true },
                 { layer: new WorldWind.AtmosphereLayer(), enabled: true },
                 { layer: new WorldWind.CompassLayer(), enabled: true },
-                {
-                    layer: new WorldWind.CoordinatesDisplayLayer(wwdRef.current),
-                    enabled: true,
-                },
+                { layer: new WorldWind.CoordinatesDisplayLayer(wwdRef.current), enabled: true },
                 { layer: new WorldWind.ViewControlsLayer(wwdRef.current), enabled: true },
             ];
 
