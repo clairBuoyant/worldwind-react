@@ -1,6 +1,6 @@
 {
-  "name": "worldwind-react",
-  "version": "0.0.1-alpha",
+  "name": "@clairbuoyant/worldwind-react",
+  "version": "0.0.0-alpha",
   "description": "An interactive globe for React using NASA's WorldWind Javascript SDK.",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
